@@ -11,6 +11,9 @@
   "dependencies": {
     "cors": "^2.8.4",
     "express": "^4.16.4",
-    "express-fileupload": "^1.0.0"
+    "express-fileupload": "^1.0.0",
+    "@iota/identity-wasm": "^0.3.11",
+    "@iota/iota.js": "^1.6.3",
+    "bs58": "^4.0.1"
   }
 }
