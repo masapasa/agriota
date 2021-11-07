@@ -8,7 +8,8 @@ import {
     Network,
     Timestamp,
     Config,
-  } from "@iota/identity-wasm/node";
+  } 
+  from "@iota/identity-wasm/node";
   import { Ed25519Seed, Bip39 } from "@iota/iota.js";
   import bs58 from "bs58";
   
@@ -50,4 +51,5 @@ import {
       receipt,
     };
   };
+console.log(createIdentity());
 export {createIdentity}

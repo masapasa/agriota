@@ -22,6 +22,9 @@ class App extends Component {
       this.setState({img:res.data})
     })
   }
+  onClick = () => {
+    const mainNet = identity.Network.Mainnet()
+    return {network:mainNet, defaultNodeURL:mainNet.defaultNodeURL, explorerURL:mainNet.explorerURL}
   render() {
     var hasilUpload
     if(this.state.img){
@@ -40,6 +43,12 @@ class App extends Component {
           accept="image/*"
           />
         </form>
+        <form encType="multipart/form-data">
+          <input type='file' name='filename'
+          onChange={(x)=>{this.upload(x.target.files[0])}}
+          accept="image/*"
+          />
+
         {hasilUpload}
       </div>
     );
