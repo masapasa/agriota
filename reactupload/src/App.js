@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import { createIdentity } from './did';
+import {defaultClientConfig} from './utils'
 
 class App extends Component {
   constructor(){
