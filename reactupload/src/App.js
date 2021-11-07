@@ -3,7 +3,7 @@ import axios from 'axios'
 import { createIdentity } from './did';
 import {defaultClientConfig} from './utils'
 
-class App extends Component {
+export default class App extends Component {
   constructor(){
     super()
     this.state = ({img:false})
@@ -24,7 +24,8 @@ class App extends Component {
   }
   onClick = () => {
     const mainNet = identity.Network.Mainnet()
-    return {network:mainNet, defaultNodeURL:mainNet.defaultNodeURL, explorerURL:mainNet.explorerURL}
+    return {network:mainNet, defaultNodeURL:mainNet.defaultNodeURL, explorerURL:mainNet.explorerURL}.then((config)=>{
+      console.log(config)
   render() {
     var hasilUpload
     if(this.state.img){
@@ -55,4 +56,3 @@ class App extends Component {
   }
 }
 
-export default App;
